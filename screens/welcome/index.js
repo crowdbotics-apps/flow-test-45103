@@ -1,4 +1,3 @@
-import { Switch } from "react-native";
 import React from "react";
 import { View, Image, Text, ScrollView, SafeAreaView, StyleSheet } from "react-native";
 
@@ -7,19 +6,21 @@ const WelcomeScreen = () => {
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.group} />
         <View style={styles.group}>
-          <Image style={styles.logo} source={require("./logo.png")} />
+          <Image style={styles.logo} source={{
+          uri: 'https://tinyurl.com/42evm3m3'
+        }} />
           <Text style={styles.text}>
             Let's build something amazing together!
           </Text>
         </View>
         <Text style={styles.footer}>Made with ❤️ by Crowdbotics</Text>
-      <Switch style={styles.vOWtjtOp}></Switch></ScrollView>
+      </ScrollView>
     </SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#F8F8FC",
+    backgroundColor: "red",
     height: "100%"
   },
   scrollView: {
@@ -42,18 +43,14 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 28,
     color: "#828AB0",
-    fontWeight: 700
+    fontWeight: "700"
   },
   footer: {
     textAlign: "center",
     fontSize: 18,
     color: "#828AB0",
-    fontWeight: 700,
+    fontWeight: "700",
     marginBottom: 20
-  },
-  vOWtjtOp: {
-    width: 50,
-    height: 25
   }
 });
 export default WelcomeScreen;
